@@ -10,7 +10,7 @@ const partialsPath = path.join(__dirname, 'partials');
 const publicDirectoryPath = express.static(path.join(__dirname, 'public'));
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'hbs');
 hbs.registerPartials(partialsPath);
